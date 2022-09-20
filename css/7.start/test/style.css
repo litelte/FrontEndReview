@@ -1,0 +1,24 @@
+h1 {
+  color: red;
+}
+h2 {
+  color: green;
+}
+p {
+  color: pink;
+}
+/* 这样看的话，在段落中的强调会自动继承段落的样式 */
+/* 链接中的强调不会继承段落的样式 */
+/* 身处段落中的有序或者无序列表根本不受影响，如果需要改变列表的属性，则需要专门添加列表的样式 */
+li {
+  color: red;
+}
+li.ext {
+  color: blue;
+}
+li.dxt {
+  font-family: fantasy;
+}
+li.fxt {
+  font-size: large;
+}

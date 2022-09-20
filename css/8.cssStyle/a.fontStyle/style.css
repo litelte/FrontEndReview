@@ -1,0 +1,16 @@
+li.ftfamily {
+  font-family: fantasy;
+}
+li.ftsize {
+  font-size: xx-large;
+}
+li.ftweight {
+  font-weight: 1000;
+}
+li.ftcolor {
+  color: red;
+}
+li.ttdecoration {
+  text-decoration: underline;
+}
+/* CSS中类的用法 */

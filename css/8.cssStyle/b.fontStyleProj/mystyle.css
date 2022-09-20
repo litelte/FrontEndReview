@@ -1,0 +1,52 @@
+/* 添加网络字体 */
+/* @font-face规则告诉浏览器，要加载由src URL指定的字体文件 */
+@font-face {
+  font-family: "Emblema One";
+  src: url(https://github.com/bethrobson/Head-First-HTML/blob/master/chapter8/journal/EmblemaOne-Regular.woff),
+    url(https://github.com/bethrobson/Head-First-HTML/blob/master/chapter8/journal/EmblemaOne-Regular.ttf),
+    /* 如果网络情况不好的话，可以使用本地文件 */ url(./EmblemaOne-Regular.ttf),
+    url(./EmblemaOne-Regular.woff);
+}
+body {
+  /* font-size: 14px; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  background-color: silver;
+}
+h1,
+h2 {
+  color: #cc6600;
+  text-decoration: underline;
+  border-bottom: thin dotted #888888;
+}
+h1 {
+  /* 就算Emblema字体显示的不好，还可以用sans-serif字体 */
+  font-family: "Emblema One", sans-serif;
+  /* 设置标题的大小 */
+  /* font-size: 150%; */
+  font-size: 220%;
+}
+/* 还可以用em表示 */
+h2 {
+  /* 这表示字体大小的比例是1.2 */
+  /* font-size: 1.2em; */
+  /* 实际的大小是父元素字体乘以倍数 */
+  /*  font-size还可以使用关键字
+      1.xx-small
+      2.x-small
+      3.small
+      4.medium
+      5.large
+      6.x-large
+      7.xx-large
+  */
+  font-size: 130%;
+  font-weight: normal;
+}
+/*  字体风格：
+    1.斜体italic
+    2.倾斜oblique
+    注意两个的区别，一个是意大利斜体，一个是正常的倾斜 */
+blockquote {
+  font-style: italic;
+}

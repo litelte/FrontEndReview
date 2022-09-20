@@ -1,0 +1,58 @@
+/* 给段落加样式 */
+p {
+  color: maroon;
+}
+/* h1 {
+  font-family: sans-serif;
+  color: gray;
+}
+h2 {
+  font-family: sans-serif;
+  color: gray;
+} */
+h1,
+h2 {
+  font-family: sans-serif;
+  color: gray;
+  /* 底部边框 */
+  border-bottom: 1px solid black;
+}
+/* 若只为h1增加样式，则直接指定 */
+h1 {
+  border-bottom: 1px solid red;
+}
+/* 花括号的左边的叫做选择器 */
+em {
+  color: blanchedalmond;
+}
+p.raspberry {
+  color: blue;
+}
+p.blueberry {
+  color: purple;
+}
+/* 如果对所有的引用块这样操作，同样上面的即可 */
+blockquote.greentea {
+  color: green;
+}
+/* 如果希望greentea类中的所有成员都用同一种样式，就可以不加前缀 */
+p.greentea {
+  color: green;
+}
+.greentea {
+  color: green;
+}
+
+/* 当然，元素可以加入多个类 */
+/*
+  写法如下：
+  <p class="greentea raspberry blueberry">
+  需要注意的是：最后的样式结果只和多个类中类名在CSS文件中的先后顺序有关，而与多个类名的先后顺序无关
+  就比如说：把类名改成raspberry blueberry greentea,如果blueberry在CSS文件的最后，那结果都不会变化，始终是原来的颜色
+  */
+
+/*  需要记住的是：
+    1.<img>和<a>还有<em>都不会继承标签p，但是会继承标题的样式，比如h1,h2之类
+    2.blockquote默认继承上一层的样式
+    3.img永远不会继承父元素的颜色
+*/

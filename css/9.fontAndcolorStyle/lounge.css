@@ -1,0 +1,85 @@
+body {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: small;
+  /* 设置行间距 */
+  line-height: 1.6em;
+}
+h1,
+h2 {
+  /* color: aquamarine; */
+  color: #007e7e;
+}
+h1 {
+  font-size: 150%;
+}
+h2 {
+  font-size: 130%;
+}
+#guarantee {
+  /* 设置边框的样式 */
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #a7cece;
+  border-style: dashed;
+  border-color: white;
+  /* 设置边框圆角 */
+  /* border-top-left-radius: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 30px; */
+  /* 增加内边距 */
+  /* 上下左右的边距都是25个像素 */
+  padding: 25px;
+  /* 只在内边距的左边增加边距 */
+  padding-left: 80px;
+  /* 增加外边距，没有特别标注上下左右的话，默认就是上下左右都是这个边距 */
+  margin: 30px;
+  /* 只在外边距的右侧增加边距 */
+  margin-right: 250px;
+  /* 设置字体，字体颜色及行高 */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #444444;
+  line-height: 1.9em;
+  font-style: italic;
+  /* 增加背景图像,默认图像会重复，直至铺满整个内边框 */
+  background-image: url(images/background.gif);
+  /* 可以设置不重复 */
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+/*  了解盒子模型：
+    1.内容区content area
+    2.内边距padding
+    3.边框border
+    4.外边距margin
+*/
+/*
+    所有元素都被当作盒子、段落、标题、块引用、列表、列表项等
+    甚至内联元素（如<em>和链接）在CSS看来也是盒子
+*/
+/* 直接在CSS中增加媒体查询 */
+/* 后面是具体的媒体查询，只要屏幕宽度大于480px就会使用这些规则 */
+
+@media screen and (min-device-width: 481px) {
+  #guarantee {
+    margin-right: 250px;
+  }
+}
+@media screen and (max-device-width: 480) {
+  #guarantee {
+    margin-right: 30px;
+    /* 设备的屏幕宽度小于等于480px,就会使用这些规则 */
+  }
+}
+/* 要打印这个页面，就会使用这个规则 */
+@media print {
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+
+/* 所有其他规则会应用于所有页面，因为它们并未包含在一个@media中 */
+p.specials {
+  color: red;
+}

@@ -1,0 +1,13 @@
+/* 设置背景为土黄色 */
+body {
+  background-color: #d2b48c;
+  /* 设置左右边距分别占页面的20% */
+  margin-left: 20%;
+  margin-right: 20%;
+  /* 定义页面主题周围的边框是虚线，颜色为黑色 */
+  border: 2px dotted black;
+  /* 在页面主题周围创建一些内边距 */
+  padding: 10px 10px 10px 10px;
+  /* 设置字体类型 */
+  font-family: sans-serif;
+}
