@@ -58,28 +58,24 @@ h2 {
     所有元素都被当作盒子、段落、标题、块引用、列表、列表项等
     甚至内联元素（如<em>和链接）在CSS看来也是盒子
 */
-/* 直接在CSS中增加媒体查询 */
-/* 后面是具体的媒体查询，只要屏幕宽度大于480px就会使用这些规则 */
-
+/*
+    这是为媒体查询做的样式表
+*/
 @media screen and (min-device-width: 481px) {
   #guarantee {
     margin-right: 250px;
   }
 }
-@media screen and (max-device-width: 480) {
+@media screen and (max-device-width: 480px) {
   #guarantee {
     margin-right: 30px;
-    /* 设备的屏幕宽度小于等于480px,就会使用这些规则 */
   }
 }
-/* 要打印这个页面，就会使用这个规则 */
 @media print {
   body {
     font-family: "Times New Roman", Times, serif;
   }
 }
-
-/* 所有其他规则会应用于所有页面，因为它们并未包含在一个@media中 */
 p.specials {
   color: red;
 }

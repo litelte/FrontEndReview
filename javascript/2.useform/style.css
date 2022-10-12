@@ -1,0 +1,37 @@
+body {
+  background: #efe5d0 url(images/background.gif) top left;
+}
+
+form {
+  display: table;
+  padding: 10px;
+  border: thin dotted #7e7e7e;
+  background-color: #e1ceb8;
+}
+
+form textarea {
+  width: 500px;
+  height: 200px;
+}
+div.tableRow {
+  display: table-row;
+}
+
+div.tableRow p {
+  display: table-cell;
+}
+div.tableRow p {
+  display: table-cell;
+  vertical-align: top;
+  padding: 3px;
+}
+/*
+    选择器对应嵌套在tableRow类的div中的p元素，这个规则
+    在这个选择器上使用first-child伪元素。这表示各行的第一个p元素右对齐，所以他们都与这一列的右边对齐
+*/
+div.tableRow p:first-child {
+  text-align: right;
+}
+p.heading {
+  font-weight: bold;
+}

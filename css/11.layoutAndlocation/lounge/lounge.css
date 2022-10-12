@@ -1,0 +1,169 @@
+body {
+  font-size: small;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+}
+
+h1,
+h2 {
+  color: #007e7e;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size: 130%;
+}
+
+#guarantee {
+  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #444444;
+  border-color: white;
+  border-width: 1px;
+  border-style: dashed;
+  background-color: #a7cece;
+  padding: 25px;
+  padding-left: 80px;
+  margin: 30px;
+  margin-right: 250px;
+  background-image: url("images/background.gif");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+/* 为div添加样式 */
+#elixirs {
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+  /* 注意：width属性只是指定内容区的宽度 */
+  width: 200px;
+  /* div的默认内边距为0像素，需要添加一些内边距，为内容提供一点空间 */
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  /* 内边距的简写方式,顺序是上、右、下、左 */
+  /* padding: 0 20px 20px 20px; */
+  /* 左边再添加一点外边距 */
+  margin-left: 20px;
+  /* 外边距也是，和内边距有一样的写法，上、右、下、左 */
+  /* 使用块元素text-align来对齐其中包含的文本 */
+  /* 这里的目的是让文本居中 */
+  /*
+    这里需要注意的是：
+    text-align会对块元素中的所有内联元素内容对齐。在对div块元素设置这个属性后，它的所有内联内容都会居中。
+    虽然属性名是text-align，但它适用于任何类型的内联元素对齐
+    text-align属性只能在块元素上设置，如果直接在内联元素（如img）上使用，就不会起到作用
+  */
+  text-align: center;
+  /* 最后指定在背景中使用的一个背景 */
+  background-image: url(images/cocktail.gif);
+  /* 图像只在x轴上重复 */
+  /* 当然如果在y轴上重复的话，就是repeat-y */
+  background-repeat: repeat-x;
+  /* 背景也有一样的写法：不过顺序是：颜色、图像、重复的属性 */
+}
+
+/* 给div块内设置样式 */
+#elixirs h2 {
+  color: black;
+}
+#elixirs h3 {
+  color: #d12c47;
+}
+
+/* 设置标题的行高 */
+#elixirs {
+  /* line-height: 1em; */
+  /*
+    上面的设置方法不正确，那样设置，会让标题挤到一块了。原因就是，<div>字体大小是从<body>元素继承的
+    而<body>元素的字体大小设置为small
+  */
+  line-height: 1;
+  /*
+    所以就是，如果让行高为自身字体的一倍，就不要用em,而是直接用数字表示
+  */
+}
+
+/* 指定span的样式 */
+.cd {
+  font-style: italic;
+}
+.artist {
+  font-weight: bold;
+}
+
+/* 给链接增加样式 */
+a:link {
+  color: green;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  color: yellow;
+}
+
+/* 上面的是示例，下来就要开始结合本项目的文件 */
+#elixirs a:link {
+  color: #007e7e;
+}
+#elixirs a:visited {
+  color: #333333;
+}
+#elixirs a:hover {
+  background: #f88396;
+  color: #0d5353;
+}
+
+/*
+  给detailed direction链接增加样式
+*/
+#detailedDirection:link {
+  color: #007e7e;
+}
+#detailedDirection:visited {
+  color: #333333;
+}
+#detailedDirection:hover {
+  background-color: red;
+  color: #f88396;
+}
+/*
+  下来就是一个层叠的特定性练习：
+  需要注意的是：id是#，类是用的点.
+  有类，有元素
+  h1.greentea:011
+  有元素，嵌套了两层
+  ol li p:003
+  单一个元素
+  em:001
+  元素嵌套
+  p img:002
+  单一个类
+  .green:010
+  元素中包含类
+  span.cd:011
+  元素中套伪类
+  a:link 011
+  元素中套id
+  #elixirs h1 101
+  一个id
+  #sidebar 100
+*/
+#elixirs {
+  /* 设置右浮动 */
+  float: right;
+}
+/*
+  元素在浮动后，便不再是正常流的一部分
+  而原来元素的位置，则被其他块元素代替
+  对于内联元素的定位时，因为考虑浮动元素的边界，则会围绕着浮动元素
+*/
+/*
+  就算把html文件中的div元素移动到原来的位置，它的浮动位置，还是没有改变
+*/

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解表单的提交</title>
+</head>
+
+<body>
+    <!--
+        1.form的action分为两部分
+        第一部分是web服务器的URL，该URL包含处理表单数据的服务器脚本的文件名
+        第二部分method属性，该属性确定表单数据如何发送到服务器。常用的方法是post
+     -->
+    <form action="http://wickedlysmart.com/hfhtmlcss/contest.php" method="post">
+        <!-- 表单的段落文本 -->
+        <p>输入你的名字（然后点击提交）来参加比赛<br>
+            First name: <input type="text" name="firstname" value="">
+            <br>
+            Last name: <input type="text" name="lastname" value="">
+            <br>
+            <input type="submit">
+        </p>
+        <p>
+            上面的是文本输入和提交输入submit，下来的就是单选按钮输入
+            <br>
+            <input type="radio" name="hotornot" value="hot" id="hot">
+            <!-- 这里用label元素 -->
+            <label for="hot">hot</label><br>
+            <input type="radio" name="hotornot" value="not" id="not">
+            <label for="not">not</label>
+        </p>
+        <p>
+            下来是复选框的输入<br>
+            <!-- 相关的复选框共用一个名字 -->
+            <input type="checkbox" name="spice" id="Salt" value="Salt">第一个框<br>
+            <!-- 每个复选框都有一个不同的值 -->
+            <input type="checkbox" name="spice" id="Pepper" value="Pepper">第二个框<br>
+            <input type="checkbox" name="spice" id="Garlic" value="Garlic">第三个框
+        </p>
+        <p>
+            表单还可以添加文本
+            <br>
+            <textarea name="comments" id="comments1" cols="30" rows="10">开始和结束标记之间的所有文本会成为浏览器文本区控件中的初始文本
+            </textarea>
+        </p>
+        <p>
+            下来是选项框<br>
+            <select name="characters" id="选择1">
+                <option value="Buckaroo">Buckaroo Banzai</option>
+                <option value="Tommy">Perfect Tommy</option>
+                <option value="Penny">Penny Priddy</option>
+                <option value="Jersey">New Jersey</option>
+                <option value="John">John Parker</option>
+            </select>
+        </p>
+        <p>数字输入的表单
+            <br>
+            点击框中才会显示上下箭头
+            <input type="number" name="number1" id="number11" min="0" max="20">
+        </p>
+        <p>
+            范围输入<br>
+            <input type="range" name="hahah" id="hahah" min="0" max="20" step="5">
+        </p>
+        <p>
+            颜色输入<br>
+            <input type="color" name="hahha" id="hahah">
+        </p>
+        <p>
+            还有日期输入、email输入、tel输入、url输入等等，就不一一展示了
+        </p>
+    </form>
+</body>
+
+</html>

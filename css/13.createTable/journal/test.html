@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试为表格隔行增加颜色</title>
+    <style>
+        /* 第二段和第四段有红色背景 */
+        p:nth-child(even) {
+            background-color: red;
+        }
+
+        /* 第1段和第三段有绿色背景 */
+        p:nth-child(odd) {
+            background-color: green;
+        }
+
+        /*
+        这里的nth-child()括号中的字符，可以使用2n表示偶数，或者2n+1表示奇数
+        */
+    </style>
+</head>
+
+<body>
+    <section>
+        <p>第一个元素</p>
+        <p>第二个元素</p>
+        <p>第三个元素</p>
+        <p>第四个元素</p>
+    </section>
+</body>
+
+</html>
